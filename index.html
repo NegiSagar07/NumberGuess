@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="fordom">
+        <h1 class = "heading">dom learning with chai or code</h1>
+        <p>hey ! how are you ??</p>
+        <p>what is this going on...</p>
+        <input placeholder = "bhar le bhai kuch toh" type="text">
+        <button>submit</button>
+        <ul>
+    
+        </ul>
+    </div>
+    <script>
+        const dom = document.querySelector('.fordom');
+        const para = document.querySelector('input');
+        const button = document.querySelector('button');
+        const list = document.querySelector('ul');
+
+        button.style.color = "blue";
+        dom.style.background = "pink";
+        dom.children[1].style.color= "red";
+        button.addEventListener('click', () => {
+            const li = document.createElement('li');
+            li.innerHTML = `${para.value}`;
+            list.appendChild(li);
+        });
+    </script>
+</body>
+</html> 
